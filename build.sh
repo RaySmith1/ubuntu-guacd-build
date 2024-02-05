@@ -23,7 +23,7 @@ BUILD_DIR="${BUILD_HOME}/guacamole-server-${VER}"
 # Stage packages
 #
 apt-get -y -qq update 
-apt-get -y -qq  \
+apt-get -y -qq install \
   build-essential \
   autotools-dev \
   autoconf \
