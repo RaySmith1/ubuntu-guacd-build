@@ -185,6 +185,7 @@ install_from_git "https://github.com/warmcat/libwebsockets" "$WITH_LIBWEBSOCKETS
 # Build guacamole-server
 #
 cd "$BUILD_DIR"
+export LDFLAGS+=" -lrt"  # Ubuntu 20.04 LTS & 1.5.4 fix
 autoreconf -fi && ./configure --prefix="$PREFIX_DIR" $GUACAMOLE_SERVER_OPTS
 # make && make install
 make && make check && make install
