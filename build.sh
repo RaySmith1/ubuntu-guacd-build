@@ -17,7 +17,7 @@ cd "${BUILD_HOME}" && {
 }
 
 BUILD_DIR="${BUILD_HOME}/guacamole-server-${VER}"
-[ -d "${BUILD_DIR" ] || { echo "Unable to download guacamole-server."; exit 1; }
+[ -d "${BUILD_DIR}" ] || { echo "Unable to download guacamole-server."; exit 1; }
 
 #
 # Stage packages
