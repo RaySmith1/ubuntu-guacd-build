@@ -34,9 +34,10 @@ apt-get -y -qq install \
   libcairo2-dev \
   libjpeg-dev \
   libpng-dev \
+  libpango1.0-dev \
   libtool-bin \
   util-linux \
-  libpango1.0-dev \
+  libcunit1-dev \
   libssl-dev 
 
 #
