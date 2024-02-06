@@ -190,3 +190,12 @@ export LDFLAGS+=" -lrt"  # Ubuntu 20.04 LTS & 1.5.4 fix
 autoreconf -fi && ./configure --prefix="$PREFIX_DIR" $GUACAMOLE_SERVER_OPTS
 # make && make install
 make && make check && make install
+
+cat <<-EOF > /opt/run-guacd.sh
+#!/bin/bash
+hostname -I
+export LC_ALL=C.UTF-8
+export LD_LIBRARY_PATH="${BASE_DIR}/lib:\$LD_LIBRARY_PATH"
+${BASE_DIR}/sbin/guacd -b 0.0.0.0 -l 4822 -f -L trace
+
+EOF
