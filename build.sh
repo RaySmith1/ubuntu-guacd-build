@@ -35,6 +35,7 @@ apt-get -y -qq install \
   libjpeg-dev \
   libpng-dev \
   libpango1.0-dev \
+  libwebp-dev \
   libtool-bin \
   util-linux \
   libcunit1-dev \
